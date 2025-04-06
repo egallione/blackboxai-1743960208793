@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-blue-900 text-white p-4 shadow-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">StockPredict</h1>
+                <div class="space-x-4">
+                    <a href="index.html" class="hover:text-blue-200">Dashboard</a>
+                    <a href="predict.html" class="hover:text-blue-200">Predictions</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Prediction Section -->
+        <div class="container mx-auto py-8 px-4">
+            <h2 class="text-3xl font-bold mb-4">Stock Prediction</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-semibold mb-4">Enter Historical Data</h3>
+                <input type="text" id="historicalData" placeholder="Enter historical data (comma-separated)" 
+                    class="flex-grow px-4 py-2 rounded-lg text-gray-800 mb-4">
+                <button id="predictBtn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold">
+                    Predict
+                </button>
+            </div>
+            <div class="mt-6">
+                <canvas id="predictionChart" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="api.js"></script>
+    <script src="prediction.js"></script>
+</body>
+</html>
